@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Horas de Trabalho</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-mask-plugin@1.14.16/dist/jquery.mask.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Horas de Trabalho</h1>
+        <p>Bem vindo ao sistema de calculo de horas de trabalho</p>
+        <p>Aqui você pode incluir o horário de entrada, almoço e a partir daí calcular o horário de saída baseado nas horas trabalhadas ou as horas trabalhadas ao incluir o horário de saída.</p>
+
+        <form>
+          <div class="mb-3">
+              <label for="entrada" class="form-label">Horário de Entrada</label>
+              <input type="text" class="form-control" id="entrada" required>
+          </div>
+          <div class="mb-3">
+              <label for="almoco" class="form-label">Horário de Início do Almoço</label>
+              <input type="text" class="form-control" id="almoco" required>
+          </div>
+          <div class="mb-3">
+              <label for="retorno" class="form-label">Horário de Retorno do Almoço</label>
+              <input type="text" class="form-control" id="retorno" required>
+          </div>
+          <div class="mb-3">
+            <label for="tipoCalculo" class="form-label">Tipo de Cálculo</label>
+            <select class="form-select" id="tipoCalculo" required>
+              <option value="saida">Calcular Horário de Saída</option>
+              <option value="horasTrabalhadas">Calcular Horas Trabalhadas</option>
+            </select>
+          </div>
+          <div class="mb-3">
+              <label for="saida" class="form-label">Horário de Saída</label>
+              <input type="text" class="form-control" id="saida" disabled>
+          </div>
+          <div class="mb-3">
+              <label for="horasTrabalhadas" class="form-label">Horas Trabalhadas (hh:mm)</label>
+              <input type="text" class="form-control" id="horasTrabalhadas" placeholder="Ex: 08:00">
+          </div>
+          <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
