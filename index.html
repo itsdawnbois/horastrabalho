@@ -1,4 +1,4 @@
-<html>
+<html data-bs-theme="dark">
 <head>
     <title>Horas de Trabalho</title>
     <meta charset="UTF-8" />
@@ -10,6 +10,11 @@
 </head>
 <body>
     <div class="container">
+        <div class="form-check form-switch mt-3 mb-3">
+          <input class="form-check-input" type="checkbox" id="themeToggle" role="switch">
+          <label class="form-check-label" for="themeToggle">Ativar Tema Claro</label>
+        </div>
+
         <h1>Horas de Trabalho</h1>
         <p>Bem vindo ao sistema de calculo de horas de trabalho</p>
         <p>Aqui você pode incluir o horário de entrada, almoço e a partir daí calcular o horário de saída baseado nas horas trabalhadas ou as horas trabalhadas ao incluir o horário de saída.</p>
@@ -26,6 +31,20 @@
           <div class="mb-3">
               <label for="retorno" class="form-label">Horário de Retorno do Almoço</label>
               <input type="text" class="form-control" id="retorno" required>
+          </div>
+          <div class="mb-3 form-check form-switch">
+              <input type="checkbox" class="form-check-input" id="declaracaoHoras">
+              <label class="form-check-label" for="declaracaoHoras">Incluir declaração de horas (Atestado médico)</label>
+          </div>
+          <div id="declaracaoHorasContainer" style="display: none;">
+              <div class="mb-3">
+                <label for="horasDeclaradasInicio" class="form-label">Horas Declaradas Inicio (hh:mm)</label>
+                <input type="text" class="form-control" id="horasDeclaradasInicio" placeholder="Ex: 01:00">
+              </div>
+              <div class="mb-3">
+                <label for="horasDeclaradasFim" class="form-label">Horas Declaradas Fim (hh:mm)</label>
+                <input type="text" class="form-control" id="horasDeclaradasFim" placeholder="Ex: 02:00">
+              </div>
           </div>
           <div class="mb-3">
             <label for="tipoCalculo" class="form-label">Tipo de Cálculo</label>
